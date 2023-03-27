@@ -2,8 +2,13 @@ package com.d5assignment3506.localmessagingsystem.repo;
 
 import com.d5assignment3506.localmessagingsystem.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
     User findByUsername(String username);
+
+    User findByEmail(String email);
+
 }
